@@ -42,7 +42,7 @@ const deleteBlog = async (req, res) => {
     let result = await Blog.findByIdAndDelete(id);
     res.json({
       success: true,
-      message: "Blog supprimer"
+      message: result
     });
   } catch (error) {
     res.json({
